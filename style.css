@@ -65,12 +65,12 @@ section.aboutMe {
 
 .profilePicDecor {
   position: relative;
-  top: 10px;
+  top: 0px;
   left: -35px;
 }
 
 .profilePicDecor > img {
-  width: 110px;
+  width: 150px;
   height: auto;
 }
 
@@ -88,10 +88,11 @@ section.aboutMe {
 }
 
 .lineDecor {
-  width: 40%;
+  width: 75%;
   height: 2px;
   background-color: var(--dark-blue);
-  margin-top: 3em;
+  margin-top: 6em;
+  margin-left: 10em;
 }
 
 .lineDecor::before {
@@ -104,3 +105,40 @@ section.aboutMe {
   position: relative;
   top: -3px;
 }
+
+/* NYU STC */
+
+section.nyuSTC {
+  margin-top: 2em;
+}
+
+.nyuImgContainer {
+  display: flex;
+  width: 100vw;
+  position: relative;
+}
+
+.eventSign {
+  position: absolute;
+  width: 55vw;
+  height: auto;
+  border: 10px solid var(--dark-blue);
+  margin-left: 35vw;
+  margin-top: 35vw;
+}
+
+.IDSign {
+  position: absolute;
+  width: 45vw;
+  height: auto;
+  border: 10px solid var(--dark-blue);
+  margin-left: 10vw;
+}
+
+/* .profilePic {
+  height: 170px;
+  width: 170px;
+  border: 10px solid var(--dark-blue);
+  margin-left: 3em;
+  display: flex;
+} */
