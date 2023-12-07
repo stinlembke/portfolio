@@ -1,24 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  font-family: Quattrocento;
-}
-
-p {
-  color: var(--dark-blue);
-  font-size: 1.2em;
-}
-
-h4 {
-  color: var(--medium-blue);
-  font-size: 1.5em;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +14,43 @@ h4 {
 body {
   background-color: #f0f7f4;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  font-family: Quattrocento;
+  color: var(--dark-blue);
+}
+
+p {
+  color: var(--dark-blue);
+  font-size: 1.2em;
+}
+
+h4 {
+  color: var(--medium-blue);
+  font-size: 1.5em;
+}
+
+/* home grid */
+
+.gridHeader {
+  grid-area: "header";
+}
+.nyuSTC {
+  grid-area: "stc";
+}
+
+/* .homeGrid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "stc stc";
+} */
 
 /* Header */
 
@@ -207,12 +225,30 @@ section.nyuSTC {
   position: relative;
 }
 
+.nyuImgContainer2 ul {
+  position: absolute;
+  margin-left: 3.2em;
+  list-style-type: none;
+  text-align: end;
+  line-height: 1.3em;
+  font-size: 1em;
+}
+
+.nyuImgContainer2 p {
+  text-align: left;
+  line-height: 1em;
+  font-size: 1em;
+  margin-left: 13em;
+  padding-top: 1em;
+}
+
 .deskSign {
   position: absolute;
   width: 80vw;
   height: auto;
   border: 10px solid var(--dark-blue);
   margin-left: 2.5em;
+  margin-top: 1.5em;
 }
 
 .bigRect {
@@ -226,3 +262,6 @@ section.nyuSTC {
   margin-left: 3em;
   display: flex;
 } */
+
+@media (min-width: 760px) {
+}
