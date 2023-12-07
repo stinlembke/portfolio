@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
-/* Universal Block Elements */
+:root {
+  --dark-blue: #233f5e;
+}
 
 body {
   background-color: #f0f7f4;
 }
+
+/* Header */
 
 header {
   width: 100%;
@@ -24,7 +28,79 @@ header {
   object-fit: contain;
 }
 
-.ornamental {
+.headerDecor {
   width: 60px;
   height: auto;
+  object-fit: contain;
+}
+
+/* About me section */
+
+section.aboutMe {
+  margin-top: 2em;
+}
+
+.aboutMeLeft {
+  width: 50%;
+}
+
+.profilePicContainer {
+  display: flex;
+  width: 100%;
+}
+
+.profilePic {
+  height: 170px;
+  width: 170px;
+  border: 10px solid var(--dark-blue);
+  margin-left: 3em;
+  display: flex;
+}
+
+.profilePic > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profilePicDecor {
+  position: relative;
+  top: 10px;
+  left: -35px;
+}
+
+.profilePicDecor > img {
+  width: 110px;
+  height: auto;
+}
+
+.aboutMeTextContainer {
+  margin-top: 1em;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2em;
+}
+
+.aboutMeTextContainer > p {
+  text-align: end;
+  font-size: 1.2em;
+  width: 40%;
+}
+
+.lineDecor {
+  width: 40%;
+  height: 2px;
+  background-color: var(--dark-blue);
+  margin-top: 3em;
+}
+
+.lineDecor::before {
+  content: "";
+  display: block;
+  height: 8px;
+  width: 8px;
+  background-color: inherit;
+  transform: rotate(45deg);
+  position: relative;
+  top: -3px;
 }
