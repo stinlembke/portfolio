@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: Quattrocento;
+}
+
+p {
+  color: var(--dark-blue);
+  font-size: 1.2em;
+}
+
+h4 {
+  color: var(--medium-blue);
+  font-size: 1.5em;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +27,7 @@
 
 :root {
   --dark-blue: #233f5e;
+  --medium-blue: #0c7489;
 }
 
 body {
@@ -34,7 +56,7 @@ header {
   object-fit: contain;
 }
 
-/* About me section */
+/* About me page */
 
 section.aboutMe {
   margin-top: 2em;
@@ -74,8 +96,28 @@ section.aboutMe {
   height: auto;
 }
 
+/* about me home page */
+
+.landingSection {
+  margin-top: 2em;
+  width: 100vw;
+}
+
+.landingContainer {
+  position: relative;
+  height: 22vw;
+}
+
+.landingDecor {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  margin-top: -1em;
+  margin-left: 2em;
+}
+
 .aboutMeTextContainer {
-  margin-top: 1em;
+  margin-top: -4em;
   display: flex;
   justify-content: flex-end;
   padding-right: 2em;
@@ -83,12 +125,12 @@ section.aboutMe {
 
 .aboutMeTextContainer > p {
   text-align: end;
-  font-size: 1.2em;
-  width: 40%;
+  width: 30vw;
+  line-height: 1.5em;
 }
 
 .lineDecor {
-  width: 75%;
+  width: 100%;
   height: 2px;
   background-color: var(--dark-blue);
   margin-top: 6em;
@@ -109,12 +151,31 @@ section.aboutMe {
 /* NYU STC */
 
 section.nyuSTC {
+  margin-top: 4em;
+}
+
+.STCTitleText {
+  position: relative;
+}
+
+.nyuSTC h4 {
+  position: absolute;
+  text-align: end;
+  letter-spacing: 0.1em;
+  margin-left: 9.4em;
+  line-height: 1.3em;
   margin-top: 2em;
+}
+
+.nyuSTC h3 {
+  text-align: center;
+  margin-bottom: 1.5em;
 }
 
 .nyuImgContainer {
   display: flex;
   width: 100vw;
+  height: 50vh;
   position: relative;
 }
 
@@ -133,6 +194,29 @@ section.nyuSTC {
   height: auto;
   border: 10px solid var(--dark-blue);
   margin-left: 10vw;
+}
+
+.nyuImgContainer p {
+  text-align: end;
+  padding-top: 10em;
+}
+
+.nyuImgContainer2 {
+  width: 100vw;
+  height: auto;
+  position: relative;
+}
+
+.deskSign {
+  position: absolute;
+  width: 80vw;
+  height: auto;
+  border: 10px solid var(--dark-blue);
+  margin-left: 2.5em;
+}
+
+.bigRect {
+  display: none;
 }
 
 /* .profilePic {
