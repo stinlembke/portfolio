@@ -50,12 +50,16 @@ h4 {
   grid-area: "stc";
 }
 
+.nyuImgContainer2 {
+  grid-area: "stc2";
+}
+
 /* .homeGrid {
   display: grid;
   grid-template-areas:
     "decor aboutMe"
     "stc stc"
-    "stc stc";
+    "stc2 stc2";
 } */
 
 /* Header */
