@@ -90,10 +90,6 @@ section.aboutMe {
   margin-top: 2em;
 }
 
-.aboutMeLeft {
-  width: 50%;
-}
-
 .profilePicContainer {
   display: flex;
   width: 100%;
@@ -133,13 +129,9 @@ section.aboutMe {
 
 .landingContainer {
   position: relative;
-  height: 22vw;
 }
 
 .landingDecor {
-  position: absolute;
-  width: 40vw;
-  height: auto;
   margin-top: -1em;
   margin-left: 2em;
 }
@@ -158,13 +150,16 @@ section.aboutMe {
   line-height: 1.5em;
 }
 
-.lineDecor {
+.aboutMeTextContainer > .lineDecor {
   position: relative;
+  margin-top: 6em;
+  margin-left: 13em;
+}
+
+.lineDecor {
   width: 100%;
   height: 2px;
   background-color: var(--dark-blue);
-  margin-top: 6em;
-  margin-left: 13em;
 }
 
 .lineDecor::before {
@@ -180,104 +175,126 @@ section.aboutMe {
 
 /* NYU STC */
 
-section.nyuSTC {
-  margin-top: 5em;
+.STCContainer {
+  margin: 2em auto;
+  padding: 1em;
+  max-width: 500px;
+
+  display: grid;
+  grid-template-areas:
+    "STCHeaderText STCHeaderText STCHeaderText STCHeaderText"
+    "STCImgContainer STCImgContainer STCImgContainer STCImgContainer"
+    "lineDecor lineDecor lineDecor lineDecor"
+    "IDSignImageContainer IDSignImageContainer IDSignText IDSignText"
+    "eventSignText eventSignText eventSignImgContainer eventSignImgContainer";
 }
 
-.STCTitleText {
-  position: relative;
-  width: 90vw;
+@media (max-width: 500px) {
+  .STCContainer {
+    /* margin: 2em; */
+  }
 }
 
-.nyuSTC h3 {
-  position: absolute;
-  text-align: end;
-  letter-spacing: 0.1em;
-  margin-left: 13em;
-  line-height: 1.3em;
-  margin-top: 2em;
-}
-
-.nyuSTC h4 {
-  text-align: end;
-  margin-top: 11em;
-  margin-left: 1.5em;
-  letter-spacing: 0.1em;
-  line-height: 1.5em;
-}
-
-.nyuImgContainer {
-  display: flex;
-  width: 100vw;
-  height: 50vh;
-  position: relative;
-}
-
-.eventSign {
-  position: absolute;
-  width: 55vw;
-  height: auto;
+.STCContainer img {
   border: 10px solid var(--dark-blue);
-  margin-left: 35vw;
-  margin-top: 35vw;
 }
 
-.IDSign {
-  position: absolute;
-  width: 45vw;
-  height: auto;
-  border: 10px solid var(--dark-blue);
-  margin-left: 10vw;
+.STCImgContainer {
+  grid-area: STCImgContainer;
+  text-align: center;
 }
 
-.nyuImgContainer p {
-  text-align: end;
-  padding-top: 10em;
+.STCHeaderText {
+  grid-area: STCHeaderText;
+  text-align: center;
+  margin-bottom: 0.3em;
 }
 
-.nyuImgContainer2 {
-  width: 100vw;
-  height: auto;
+.STCContainer > .lineDecor {
+  grid-area: lineDecor;
+  display: block;
   position: relative;
+  margin: 1em 0;
 }
 
-.nyuImgContainer2 ul {
+.STCContainer > .lineDecor::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: inherit;
+  transform: rotate(45deg);
   position: absolute;
-  margin-left: 3.2em;
-  list-style-type: none;
-  text-align: end;
-  line-height: 1.3em;
-  font-size: 1em;
+  top: -3px;
+  right: 0;
 }
 
-.nyuImgContainer2 p {
+.STCHeaderImg {
+  width: 100%;
+  height: auto;
+}
+
+.eventSignImgContainer {
+  text-align: right;
+  grid-area: eventSignImgContainer;
+}
+
+.IDSignImageContainer {
+  grid-area: IDSignImageContainer;
   text-align: left;
-  line-height: 1em;
-  font-size: 1em;
-  margin-left: 13em;
-  padding-top: 1em;
 }
 
-.deskSign {
-  position: absolute;
-  width: 80vw;
-  height: auto;
-  border: 10px solid var(--dark-blue);
-  margin-left: 2.5em;
-  margin-top: 1.5em;
-}
-
-.blueRect {
-  display: none;
-}
-
-/* .profilePic {
-  height: 170px;
-  width: 170px;
-  border: 10px solid var(--dark-blue);
-  margin-left: 3em;
+.IDSignText {
+  grid-area: IDSignText;
   display: flex;
-} */
+  align-self: center;
+  flex-direction: column;
+  gap: 1em;
+  padding-left: 1em;
+}
 
-@media (min-width: 760px) {
+.eventSignText {
+  grid-area: eventSignText;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  gap: 1em;
+  text-align: right;
+  padding-right: 1em;
+}
+
+.eventSignText > ul {
+  list-style: none;
+  margin-right: 1em;
+}
+
+.eventSignText > ul > li {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+@media (max-width: 450px) {
+  .IDSignText {
+    padding-left: 0.5em;
+  }
+  .eventSignText > ul {
+    margin-right: 0.5em;
+  }
+}
+
+/* Large screen layout */
+@media (min-width: 1050px) {
+  .STCContainer {
+    grid-template-areas:
+      "STCHeaderText STCHeaderText STCHeaderText STCHeaderText"
+      "lineDecor lineDecor lineDecor lineDecor"
+      "IDSignImageContainer IDSignText IDSignText IDSignText"
+      "STCImgContainer STCImgContainer STCImgContainer STCImgContainer"
+      "eventSignText eventSignText eventSignText eventSignImgContainer";
+    row-gap: 0.25em;
+    max-width: 1000px;
+  }
+
+  .STCHeaderImg {
+    width: 80%;
+  }
 }
