@@ -251,35 +251,6 @@ section.aboutMe {
   margin-bottom: 0.5em;
 }
 
-/* HOME media queries */
-
-@media (max-width: 450px) {
-  .IDSignText {
-    padding-left: 0.5em;
-  }
-  .eventSignText > ul {
-    margin-right: 0.5em;
-  }
-}
-
-/* Large screen layout */
-@media (min-width: 1050px) {
-  .STCContainer {
-    grid-template-areas:
-      "STCHeaderText STCHeaderText STCHeaderText STCHeaderText"
-      "lineDecor lineDecor lineDecor lineDecor"
-      "IDSignImageContainer IDSignText IDSignText IDSignText"
-      "STCImgContainer STCImgContainer STCImgContainer STCImgContainer"
-      "eventSignText eventSignText eventSignText eventSignImgContainer";
-    row-gap: 0.25em;
-    max-width: 1000px;
-  }
-
-  .STCHeaderImg {
-    width: 80%;
-  }
-}
-
 /* eating the monster apart */
 .etmaContainer {
   margin: 2em auto;
@@ -357,4 +328,35 @@ section.aboutMe {
   margin-left: auto;
   margin-right: auto;
   border: 10px solid var(--dark-blue);
+}
+
+/* HOME media queries */
+
+@media (max-width: 450px) {
+  .IDSignText {
+    padding-left: 0.5em;
+  }
+  .eventSignText > ul {
+    margin-right: 0.5em;
+  }
+}
+
+/* MEDIA QUERIES */
+
+/* Large screen layout */
+@media (min-width: 1050px) {
+  .STCContainer {
+    grid-template-areas:
+      "STCHeaderText STCHeaderText STCHeaderText STCHeaderText"
+      "lineDecor lineDecor lineDecor lineDecor"
+      "IDSignImageContainer IDSignText IDSignText IDSignText"
+      "STCImgContainer STCImgContainer STCImgContainer STCImgContainer"
+      "eventSignText eventSignText eventSignText eventSignImgContainer";
+    row-gap: 0.25em;
+    max-width: 1000px;
+  }
+
+  .STCHeaderImg {
+    width: 80%;
+  }
 }
