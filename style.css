@@ -251,6 +251,88 @@ section.aboutMe {
   margin-bottom: 0.5em;
 }
 
+/* the skint app */
+
+.skintContainer {
+  margin: 2em auto;
+  padding: 1em;
+  max-width: 500px;
+
+  display: grid;
+  grid-template-areas:
+    "lineDecor lineDecor"
+    "skintTitle skintTitle"
+    "skintLaunchImg skintLaunchImg"
+    "skintList1 skintList2"
+    "skintEventImg skintEventImg";
+}
+
+.skintContainer h3 {
+  text-align: end;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+}
+
+.skintTitle {
+  grid-area: skintTitle;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+.skintContainer > .lineDecor {
+  grid-area: lineDecor;
+  display: block;
+  position: relative;
+  margin: 1em 0;
+}
+
+.skintContainer > .lineDecor::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: inherit;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -3px;
+  right: 0;
+}
+
+.skintLaunchImg {
+  grid-area: skintLaunchImg;
+  width: 70%;
+  height: auto;
+  margin: auto;
+}
+
+.skintContainer ul {
+  padding: 1em 0.5em;
+}
+
+.skintContainer ul li {
+  line-height: 1.5em;
+}
+
+.skintList1 {
+  grid-area: skintList1;
+  width: 50vw;
+  height: auto;
+  text-align: right;
+}
+
+.skintList2 {
+  grid-area: skintList2;
+  width: 50vw;
+  height: auto;
+  text-align: left;
+}
+
+.skintEventImg {
+  grid-area: skintEventImg;
+  width: 70%;
+  height: auto;
+  margin: auto;
+}
+
 /* eating the monster apart */
 .etmaContainer {
   margin: 2em auto;
@@ -303,10 +385,9 @@ section.aboutMe {
 
 .HL1 {
   grid-area: HL1;
-  width: 70%;
+  width: 80%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   border: 10px solid var(--dark-blue);
 }
 
@@ -323,7 +404,7 @@ section.aboutMe {
 .HL2 {
   grid-area: HL2;
   margin-top: 1em;
-  width: 70%;
+  width: 80%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
