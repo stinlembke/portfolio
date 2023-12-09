@@ -11,9 +11,13 @@
   --medium-blue: #0c7489;
 }
 
+/* Universal block rules */
+
 body {
   background-color: #f0f7f4;
 }
+
+/* Universal font rules */
 
 h1,
 h2,
@@ -34,33 +38,13 @@ p {
 h4 {
   color: var(--medium-blue);
   font-size: 1.3em;
+  letter-spacing: 0.09em;
 }
 
-/* home grid */
-
-.landingContainer {
-  grid-area: "decor";
+ul li {
+  font-weight: bold;
+  list-style: none;
 }
-
-.aboutMeTextContainer {
-  grid-area: "aboutMe";
-}
-
-.nyuSTC {
-  grid-area: "stc";
-}
-
-.nyuImgContainer2 {
-  grid-area: "stc2";
-}
-
-/* .homeGrid {
-  display: grid;
-  grid-template-areas:
-    "decor aboutMe"
-    "stc stc"
-    "stc2 stc2";
-} */
 
 /* Header */
 
@@ -120,7 +104,9 @@ section.aboutMe {
   height: auto;
 }
 
-/* about me home page */
+/* HOME PAGE */
+
+/* landing strip */
 
 .landingSection {
   margin-top: 2em;
@@ -173,7 +159,7 @@ section.aboutMe {
   top: -3px;
 }
 
-/* NYU STC */
+/* nyu stc */
 
 .STCContainer {
   margin: 2em auto;
@@ -187,12 +173,6 @@ section.aboutMe {
     "lineDecor lineDecor lineDecor lineDecor"
     "IDSignImageContainer IDSignImageContainer IDSignText IDSignText"
     "eventSignText eventSignText eventSignImgContainer eventSignImgContainer";
-}
-
-@media (max-width: 500px) {
-  .STCContainer {
-    /* margin: 2em; */
-  }
 }
 
 .STCContainer img {
@@ -269,8 +249,9 @@ section.aboutMe {
 
 .eventSignText > ul > li {
   margin-bottom: 0.5em;
-  font-weight: bold;
 }
+
+/* HOME media queries */
 
 @media (max-width: 450px) {
   .IDSignText {
@@ -297,4 +278,83 @@ section.aboutMe {
   .STCHeaderImg {
     width: 80%;
   }
+}
+
+/* eating the monster apart */
+.etmaContainer {
+  margin: 2em auto;
+  padding: 1em;
+  max-width: 500px;
+
+  display: grid;
+  grid-template-areas:
+    "lineDecor"
+    "etmaTitle"
+    "HL1"
+    "leaf"
+    "HL2";
+}
+
+.etmaContainer h3 {
+  text-align: end;
+}
+
+.etmaTitle {
+  grid-area: etmaTitle;
+  margin-bottom: 1em;
+}
+
+/* .etmaList {
+  grid-area: etmaList;
+  text-align: end;
+  margin-bottom: 0.3em;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+} */
+
+.etmaContainer > .lineDecor {
+  grid-area: lineDecor;
+  display: block;
+  position: relative;
+  margin: 1em 0;
+}
+
+.etmaContainer > .lineDecor::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: inherit;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -3px;
+  right: 0;
+}
+
+.HL1 {
+  grid-area: HL1;
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid var(--dark-blue);
+}
+
+.leaf {
+  margin-top: 1em;
+  grid-area: leaf;
+  border: none;
+  width: 10%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.HL2 {
+  grid-area: HL2;
+  margin-top: 1em;
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid var(--dark-blue);
 }
