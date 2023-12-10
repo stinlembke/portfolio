@@ -9,12 +9,14 @@
 :root {
   --dark-blue: #233f5e;
   --medium-blue: #0c7489;
+  --white-bg: #f0f7f4;
+  --green: #b7cdc8;
 }
 
 /* Universal block rules */
 
 body {
-  background-color: #f0f7f4;
+  background-color: var(--white-bg);
 }
 
 /* Universal font rules */
@@ -114,43 +116,37 @@ section.aboutMe {
 /* landing strip */
 
 .landingSection {
+  background-color: var(--green);
   margin-top: 2em;
-  width: 100vw;
+  margin-bottom: 0;
+  padding: 1em 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .landingContainer {
-  position: relative;
-}
-
-.landingDecor {
-  margin-top: -1em;
-  margin-left: 2em;
+  height: 100%;
 }
 
 .aboutMeTextContainer {
-  position: relative;
-  margin-top: -4em;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 2em;
+  margin: auto 0;
+}
+
+.landingDecor {
+  margin: 0 auto;
 }
 
 .aboutMeTextContainer > p {
   text-align: end;
-  width: 30vw;
   line-height: 1.5em;
   padding-right: 1em;
 }
 
-.aboutMeTextContainer > .lineDecor {
-  position: relative;
-  margin-top: 6em;
-  margin-left: 13em;
-}
-
 .lineDecor {
-  width: 100%;
   height: 2px;
+  margin: 1em;
+  position: relative;
   background-color: var(--dark-blue);
 }
 
@@ -203,7 +199,7 @@ section.aboutMe {
   margin: 1em 0;
 }
 
-.STCContainer > .lineDecor::after {
+.lineDecor::after {
   content: "";
   height: 8px;
   width: 8px;
@@ -259,11 +255,19 @@ section.aboutMe {
 
 /* the skint app */
 
-.skintContainer {
-  margin: 2em auto;
-  padding: 1em;
-  max-width: 500px;
+/* .skint {
+  background-image: url("images/greendiamondsmaller.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+} */
 
+.skintContainer {
+  padding: 1em;
+  margin: 2em auto;
+  background-image: url("images/greendiamondsmaller.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  max-width: 500px;
   display: grid;
   grid-template-areas:
     "lineDecor lineDecor"
@@ -318,14 +322,14 @@ section.aboutMe {
 
 .skintList1 {
   grid-area: skintList1;
-  width: 50vw;
+  width: 100%;
   height: auto;
   text-align: right;
 }
 
 .skintList2 {
   grid-area: skintList2;
-  width: 50vw;
+  width: 100%;
   height: auto;
   text-align: left;
 }
@@ -558,6 +562,11 @@ section.aboutMe {
   }
 }
 
+@media (min-width: 800px) {
+  .aboutMeTextContainer > p {
+    text-align: center;
+  }
+}
 /* Large screen layout */
 @media (min-width: 1050px) {
   .STCContainer {
