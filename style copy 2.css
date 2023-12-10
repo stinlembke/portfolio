@@ -275,12 +275,14 @@ section.aboutMe {
 
 .skintContainer h3 {
   text-align: end;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
 }
 
 .skintTitle {
   grid-area: skintTitle;
-  padding: 1em 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
 }
 
 .skintContainer > .lineDecor {
@@ -415,8 +417,6 @@ section.aboutMe {
   border: 10px solid var(--dark-blue);
 }
 
-/* MEDIA QUERIES */
-
 /* HOME media queries */
 
 @media (max-width: 450px) {
@@ -428,135 +428,7 @@ section.aboutMe {
   }
 }
 
-@media (min-width: 760px) {
-  /* NYU STC */
-
-  .STCContainer {
-    margin: auto;
-    padding: 0;
-    max-width: 80vw;
-
-    grid-template-areas:
-      "STCHeaderText STCHeaderText STCHeaderText STCHeaderText"
-      "lineDecor lineDecor lineDecor lineDecor"
-      "IDSignImageContainer IDSignText IDSignText IDSignText"
-      "STCImgContainer STCImgContainer STCImgContainer STCImgContainer"
-      "eventSignText eventSignText eventSignText eventSignImgContainer";
-    row-gap: 0.25em;
-  }
-
-  .STCContainer h4 {
-    font-size: 1.7em;
-    padding: 0%;
-  }
-
-  .STCContainer h3 {
-    font-size: 1.4em;
-    padding: 0%;
-  }
-
-  .STCContainer ul li {
-    font-size: 1.2em;
-    padding: 0%;
-  }
-
-  /* skint */
-
-  .skintContainer {
-    margin: 0;
-    padding: 0;
-    max-width: 80vw;
-    margin: auto;
-    display: grid;
-    grid-template-areas:
-      "lineDecor lineDecor lineDecor lineDecor"
-      "skintTitle skintTitle skintList1 skintList1"
-      "skintTitle skintTitle skintList2 skintList2"
-      "skintLaunchImg skintLaunchImg skintEventImg skintEventImg";
-  }
-
-  .skintContainer ul {
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 1em;
-    font-size: 1.2em;
-  }
-
-  .skintContainer h4 {
-    font-size: 1.7em;
-    padding: 0;
-  }
-
-  .skintContainer h3 {
-    text-align: left;
-    padding: 0;
-    font-size: 1.2em;
-  }
-
-  .skintContainer img {
-    padding-top: 1em;
-  }
-
-  .skintLaunchImg {
-    width: 70%;
-    height: auto;
-    margin: auto;
-  }
-
-  .skintEventImg {
-    width: 70%;
-    height: auto;
-    margin: auto;
-  }
-
-  .skintList1 {
-    width: 100%;
-  }
-
-  .skintList2 {
-    width: 100%;
-    text-align: right;
-  }
-
-  /* EtMA */
-
-  .etmaContainer {
-    margin: 2em auto;
-    padding: 1em;
-    max-width: 80vw;
-
-    display: grid;
-    grid-template-areas:
-      "lineDecor lineDecor lineDecor lineDecor"
-      "etmaTitle etmaTitle leaf leaf"
-      "HL1 HL1 HL2 HL2";
-  }
-
-  .etmaContainer h3 {
-    text-align: left;
-    padding-left: 0.5em;
-    padding-top: 0.5em;
-  }
-
-  .HL1 {
-    margin-top: 1em;
-    width: 80%;
-  }
-
-  .HL2 {
-    margin: auto;
-    width: 100%;
-  }
-
-  .leaf {
-    width: 15%;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 0;
-  }
-}
+/* MEDIA QUERIES */
 
 /* Large screen layout */
 @media (min-width: 1050px) {
@@ -573,12 +445,5 @@ section.aboutMe {
 
   .STCHeaderImg {
     width: 80%;
-  }
-
-  .leaf {
-    width: 12%;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 0;
   }
 }
