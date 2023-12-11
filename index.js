@@ -34,6 +34,8 @@ button.addEventListener('click', () => {
   // otherwise, add it.
 });
 
+//change color of landing decor motif if dark mode is enabled
+
 function isDarkModeEnabled(){
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 }

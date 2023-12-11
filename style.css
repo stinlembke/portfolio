@@ -64,10 +64,10 @@ ul li {
 
 header {
   width: 100%;
-  height: 75px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 15px 15px;
 }
 
 .headerImg {
@@ -141,7 +141,6 @@ section.aboutMe {
 
 .landingSection {
   background-color: var(--green);
-  margin-top: 2em;
   padding: 1em 0;
   width: 100%;
   display: flex;
@@ -290,12 +289,6 @@ section.aboutMe {
 }
 
 /* the skint app */
-
-/* .skint {
-  background-image: url("images/greendiamondsmaller.svg");
-  background-repeat: no-repeat;
-  background-position: center top;
-} */
 
 .skintContainer {
   padding: 1em;
@@ -472,10 +465,6 @@ section.aboutMe {
 }
 
 @media (min-width: 760px) {
-  .headerImg {
-    padding-top: 1em;
-  }
-
   .profilePic {
     height: 270px;
     width: 270px;
@@ -667,5 +656,19 @@ section.aboutMe {
     --medium-blue: #b7cdc8;
     --white-bg: #233f5e;
     --green: #0c7489;
+  }
+
+  h4 {
+    color: var(--dark-blue);
+  }
+
+  .STCContainer,
+  .skintContainer,
+  .etmaContainer {
+    background-image: url("images/bluediamond.svg");
+  }
+
+  header {
+    background-color: var(--medium-blue);
   }
 }
