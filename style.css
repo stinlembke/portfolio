@@ -13,6 +13,13 @@
   --green: #b7cdc8;
 }
 
+.darkmode {
+  --dark-blue: #f0f7f4;
+  --medium-blue: #b7cdc8;
+  --white-bg: #233f5e;
+  --green: #0c7489;
+}
+
 /* Universal block rules */
 
 body {
@@ -69,10 +76,18 @@ header {
   object-fit: contain;
 }
 
-.headerDecor {
+#headerDecor {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 0.5em;
+}
+
+.headerDecor2 {
   width: 60px;
   height: auto;
   object-fit: contain;
+  margin-top: 1em;
 }
 
 /* About me page */
@@ -80,7 +95,6 @@ header {
 section.aboutMe {
   margin-top: 2em;
 }
-
 .profilePicContainer {
   display: flex;
   width: 100%;
@@ -111,6 +125,16 @@ section.aboutMe {
   height: auto;
 }
 
+.aboutMeText {
+  width: 70%;
+  text-align: end;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  float: right;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
 /* HOME PAGE */
 
 /* landing strip */
@@ -118,11 +142,15 @@ section.aboutMe {
 .landingSection {
   background-color: var(--green);
   margin-top: 2em;
-  margin-bottom: 0;
   padding: 1em 0;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
+}
+
+#greeting {
+  text-align: end;
+  padding-right: 1em;
 }
 
 .landingContainer {
@@ -134,7 +162,7 @@ section.aboutMe {
 }
 
 .landingDecor {
-  margin: 0 auto;
+  margin: 0 0 0 1em;
 }
 
 .aboutMeTextContainer > p {
@@ -164,9 +192,12 @@ section.aboutMe {
 /* nyu stc */
 
 .STCContainer {
+  background-image: url("images/greendiamondsmaller.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 2em auto;
   padding: 1em;
-  max-width: 500px;
+  max-width: 100vw;
 
   display: grid;
   grid-template-areas:
@@ -211,13 +242,18 @@ section.aboutMe {
 }
 
 .STCHeaderImg {
-  width: 100%;
+  width: 90vw;
   height: auto;
 }
 
 .eventSignImgContainer {
   text-align: right;
   grid-area: eventSignImgContainer;
+}
+
+.eventSignImgContainer img {
+  width: 100%;
+  height: auto;
 }
 
 .IDSignImageContainer {
@@ -267,7 +303,7 @@ section.aboutMe {
   background-image: url("images/greendiamondsmaller.svg");
   background-repeat: no-repeat;
   background-position: center top;
-  max-width: 500px;
+  max-width: 100vw;
   display: grid;
   grid-template-areas:
     "lineDecor lineDecor"
@@ -343,9 +379,12 @@ section.aboutMe {
 
 /* eating the monster apart */
 .etmaContainer {
+  background-image: url("images/greendiamondsmaller.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 2em auto;
   padding: 1em;
-  max-width: 500px;
+  max-width: 100vw;
 
   display: grid;
   grid-template-areas:
@@ -433,6 +472,24 @@ section.aboutMe {
 }
 
 @media (min-width: 760px) {
+  .headerImg {
+    padding-top: 1em;
+  }
+
+  .profilePic {
+    height: 270px;
+    width: 270px;
+    margin-left: 5em;
+  }
+
+  .profilePicDecor > img {
+    width: 200px;
+  }
+
+  .aboutMeText {
+    margin-right: 2em;
+  }
+
   /* NYU STC */
 
   .STCContainer {
@@ -447,6 +504,10 @@ section.aboutMe {
       "STCImgContainer STCImgContainer STCImgContainer STCImgContainer"
       "eventSignText eventSignText eventSignText eventSignImgContainer";
     row-gap: 0.25em;
+  }
+
+  .STCHeaderText {
+    margin-top: 1em;
   }
 
   .STCContainer h4 {
@@ -569,6 +630,10 @@ section.aboutMe {
 }
 /* Large screen layout */
 @media (min-width: 1050px) {
+  .landingDecor {
+    margin-left: 5em;
+  }
+
   .STCContainer {
     grid-template-areas:
       "STCHeaderText STCHeaderText STCHeaderText STCHeaderText"
@@ -582,6 +647,10 @@ section.aboutMe {
 
   .STCHeaderImg {
     width: 80%;
+  }
+
+  .STCHeaderText {
+    margin-top: 1em;
   }
 
   .leaf {

@@ -10,9 +10,11 @@
   <body>
     <header>
       <img
-        class="headerDecor"
-        src="images/homeDecor.png"
-        alt="A button for the home page that is comprised of a green diamond and a dark blue leaf inside of two squares."
+        id="headerDecor"
+        src="images/moon.svg"
+        width="50px"
+        height="50px"
+        alt="A button for the home page that a green circle with a white crescent moon inside."
       />
       <img
         class="headerImg"
@@ -21,15 +23,18 @@
         width="560"
         alt="a decorative nameplate comprised of two diamonds with a long hexagon in the middle. In the hexagon reads Stin Lembke. Each diamond has a leaf inside."
       />
-      <img
-        class="headerDecor"
-        alt="A button for the home page that is comprised of a blue diamond and a dark blue leaf inside of two squares."
-        src="images/aboutDecor.png"
-      />
+      <a href="about.html"
+        ><img
+          class="headerDecor2"
+          alt="A button for the home page that is comprised of a blue diamond and a dark blue leaf inside of two squares."
+          src="images/aboutDecor.png"
+      /></a>
     </header>
+
     <section class="landingSection">
       <div class="landingContainer">
         <img
+          id="decor"
           class="landingDecor"
           src="images/bigSquareDecor.png"
           width="222"
@@ -39,7 +44,9 @@
       </div>
       <div class="aboutMeTextContainer">
         <p>Designer, Illustrator, Storyteller.</p>
+
         <div class="lineDecor"></div>
+        <h4 id="greeting">Welcome!</h4>
       </div>
     </section>
 
@@ -154,4 +161,5 @@
       />
     </section>
   </body>
+  <script src="index.js"></script>
 </html>
