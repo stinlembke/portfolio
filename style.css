@@ -660,3 +660,12 @@ section.aboutMe {
     margin-right: 0;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark-blue: #f0f7f4;
+    --medium-blue: #b7cdc8;
+    --white-bg: #233f5e;
+    --green: #0c7489;
+  }
+}

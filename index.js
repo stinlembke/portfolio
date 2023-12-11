@@ -2,9 +2,8 @@
 
 //change greeting on home page based on time of day
 
-    let date = new Date();
+let date = new Date();
 let time = date.getHours();
-console.log(time)
 
 let greeting = document.getElementById('greeting');  
     
@@ -19,9 +18,10 @@ let greeting = document.getElementById('greeting');
 //button that changes color scheme to dark
 
 const button = document.getElementById('headerDecor')
+let decor = document.getElementById('decor')
 
 button.addEventListener('click', () => {
-    let decor = document.getElementById('decor')
+
     if (document.body.classList.contains('darkmode')) {
         document.body.classList.remove('darkmode')
         decor.src = "images/bigSquareDecor.png";
@@ -33,3 +33,11 @@ button.addEventListener('click', () => {
   // if it does, remove it
   // otherwise, add it.
 });
+
+function isDarkModeEnabled(){
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+if (isDarkModeEnabled()) {
+    decor.src = "images/biggraphicdarkmode.png";
+}
